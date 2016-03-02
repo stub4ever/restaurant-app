@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Restaurants</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Adress</th>
+      <th>Phone number</th>
+      <th>Category</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @restaurants.each do |restaurant| %>
+    <ul>
+      <li><%= restaurant.name %></li>
+      <li><%= restaurant.address %></li>
+      <li><%= restaurant.phone_number %></li>
+      <li><%= restaurant.category %></li>
+      <li><%= link_to 'Show', restaurant %></li>
+      <li><%= link_to 'Edit', edit_restaurant_path(restaurant) %></li>
+      <li><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+
+    </ul>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Restaurant', new_restaurant_path %>
