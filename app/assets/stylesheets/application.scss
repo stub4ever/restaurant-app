@@ -1,0 +1,27 @@
+// Graphical variables
+
+// typography
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,700);
+
+@import "config/variables";
+@import "config/bootstrap_variables";
+
+// External libraries
+@import "bootstrap-sprockets";
+@import "bootstrap";
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
+// Your CSS
+@import "layout/index";
+@import "components/index";
+@import "pages/index";
+@import "vendor/index";
+
+// Assets
+// @import "plugin";
+
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
